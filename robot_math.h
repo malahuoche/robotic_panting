@@ -5,7 +5,7 @@
 
 using namespace Eigen;
 
-#define M_PI  3.14159265358979323846264338327950   // pi
+//#define M_PI  3.14159265358979323846264338327950   // pi
 typedef Eigen::Matrix<double, 1, 6> Vector6D;
 
 void Exp(Vector3d w, double th, Matrix3d &R);

@@ -17,7 +17,7 @@ void GetCircle(HLRobot &HLRobot, vector<Vector6D> &posVec1)
 void GetTriangle(HLRobot &HLRobot, vector<Vector6D> &posVec2)
 {
 	Vector6D posTemp;
-	//k为三角形边的编号，j为每条边点的编号，i为坐标编号
+
 	for (int k = 0; k < 3; k++)
 	{
 		for (int j = 0; j < 6; j++)
@@ -34,7 +34,7 @@ void GetTriangle(HLRobot &HLRobot, vector<Vector6D> &posVec2)
 			posVec2.push_back(posTemp);
 		}
 	}
-	//回到第一个顶点
+
 	posVec2.push_back(HLRobot.triPos_1);
 }
 void GetCmd(HLRobot &HLRobot, vector<string> &robotCommand, string* cmdString, vector<Vector6D> pos_vec)
@@ -43,7 +43,7 @@ void GetCmd(HLRobot &HLRobot, vector<string> &robotCommand, string* cmdString, v
 
 	for (int i = 0; i < pos_vec.size(); i++)
 	{
-		//计算关节角，存放在HLRobot对象的theta向量中
+
 		HLRobot.RobotBackward(pos_vec[i]);
 
 		for (int j = 0; j < 6; j++)
